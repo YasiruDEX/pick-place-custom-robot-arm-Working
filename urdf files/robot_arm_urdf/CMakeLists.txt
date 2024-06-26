@@ -2,9 +2,23 @@ cmake_minimum_required(VERSION 2.8.3)
 
 project(robot_arm_urdf)
 
-find_package(catkin REQUIRED)
+find_package(catkin REQUIRED COMPONENTS
+	messege_generation
+	roscpp
+	rospy
+	std_msgs
+	geometry_msgs
+	urdf
+	xacro
+	messege_generation
+)
 
-catkin_package()
+catkin_package(CATKIN_DEPENDS
+	geomtry_msgs
+	roscpp
+	rospy
+	std_msgs
+)
 
 find_package(roslaunch)
 
